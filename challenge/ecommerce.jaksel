@@ -14,6 +14,7 @@ literally keyboardstock itu 8
 
 literally totalRevenue itu 0
 
+spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 spill "🏪 E-COMMERCE ORDER MANAGEMENT SYSTEM"
 spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 spill ""
@@ -23,38 +24,27 @@ spill "   - Smartphone Pro Max (Stock: 30)"
 spill "   - Mechanical Keyboard (Stock: 8)"
 spill ""
 
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 spill "🛒 ORDER #1 - Budi Santoso"
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-spill "📦 Product: " + laptopname
-spill "🔢 Quantity: 1"
-spill ""
 
 // TODO: Hitung subtotal untuk 1 laptop
 literally subtotal itu laptopprice * 1
-spill "💰 Subtotal: Rp " + subtotal
 
 // TODO: Set shipping cost
 literally shipping itu 50000
-spill "🚚 Shipping: Rp " + shipping
 
 // TODO: Hitung total sebelum fee (subtotal + shipping)
 literally totalBeforeFee itu subtotal + shipping
 
 // TODO: Hitung processing fee untuk CREDIT_CARD (2.9% + Rp 2,000)
 literally fee itu totalBeforeFee * 0.029 + 2000
-spill "💳 Payment: CREDIT_CARD"
-spill "📊 Processing fee: Rp " + fee
 
 // TODO: Hitung tax 11% dari totalBeforeFee
 literally tax itu totalBeforeFee * TAXRATE
-spill "📋 Tax (11%): Rp " + tax
 
 // TODO: Hitung final total (totalBeforeFee + fee + tax)
 literally finalTotal itu totalBeforeFee + fee + tax
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-spill "💵 TOTAL: Rp " + finalTotal
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+spill "💰 Subtotal: Rp " + subtotal
+spill "Total: Rp " + finalTotal
 spill ""
 
 // TODO: Update laptop stock (kurangi 1)
@@ -66,42 +56,30 @@ whichis totalRevenue itu totalRevenue + finalTotal
 spill "✅ Order ORD-1 created successfully!"
 spill ""
 
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 spill "🛒 ORDER #2 - Siti Nurhaliza"
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-spill "📦 Product: " + phonename
-spill "🔢 Quantity: 2"
-spill ""
 
 // TODO: Hitung subtotal untuk 2 phone
 literally subtotal2 itu phoneprice * 2
-spill "💰 Subtotal: Rp " + subtotal2
 
 // TODO: Hitung discount 20% dari subtotal2
 literally discount2 itu subtotal2 * 0.20
-spill "🎉 Discount (20%): -Rp " + discount2
 
 // TODO: Set shipping cost
 literally shipping2 itu 50000
-spill "🚚 Shipping: Rp " + shipping2
 
 // TODO: Hitung total sebelum fee (subtotal2 - discount2 + shipping2)
 literally totalBeforeFee2 itu subtotal2 - discount2 + shipping2
 
 // TODO: Hitung processing fee untuk E_WALLET (0.7%)
 literally fee2 itu totalBeforeFee2 * 0.007
-spill "💳 Payment: E_WALLET"
-spill "📊 Processing fee: Rp " + fee2
 
 // TODO: Hitung tax 11%
 literally tax2 itu totalBeforeFee2 * TAXRATE
-spill "📋 Tax (11%): Rp " + tax2
 
 // TODO: Hitung final total
 literally finalTotal2 itu totalBeforeFee2 + fee2 + tax2
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-spill "💵 TOTAL: Rp " + finalTotal2
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+spill "💰 Subtotal: Rp " + subtotal2
+spill "Total: Rp " + finalTotal2
 spill ""
 
 // TODO: Update phone stock (kurangi 2)
@@ -113,44 +91,30 @@ whichis totalRevenue itu totalRevenue + finalTotal2
 spill "✅ Order ORD-2 created successfully!"
 spill ""
 
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 spill "🛒 ORDER #3 - Ahmad Dahlan"
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-spill "📦 Product: " + keyboardname
-spill "🔢 Quantity: 5"
-spill ""
-spill "⚠️  WARNING: Low stock for " + keyboardname
-spill ""
 
 // TODO: Hitung subtotal untuk 5 keyboard
 literally subtotal3 itu keyboardprice * 5
-spill "💰 Subtotal: Rp " + subtotal3
 
 // TODO: Hitung discount 15%
 literally discount3 itu subtotal3 * 0.15
-spill "🎉 Discount (15%): -Rp " + discount3
 
 // TODO: Set shipping cost
 literally shipping3 itu 50000
-spill "🚚 Shipping: Rp " + shipping3
 
 // TODO: Hitung total sebelum fee
 literally totalBeforeFee3 itu subtotal3 - discount3 + shipping3
 
 // TODO: Set processing fee untuk BANK_TRANSFER (Rp 4,000 flat)
 literally fee3 itu 4000
-spill "💳 Payment: BANK_TRANSFER"
-spill "📊 Processing fee: Rp " + fee3
 
 // TODO: Hitung tax 11%
 literally tax3 itu totalBeforeFee3 * TAXRATE
-spill "📋 Tax (11%): Rp " + tax3
 
 // TODO: Hitung final total
 literally finalTotal3 itu totalBeforeFee3 + fee3 + tax3
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-spill "💵 TOTAL: Rp " + finalTotal3
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+spill "💰 Subtotal: Rp " + subtotal3
+spill "Total: Rp " + finalTotal3
 spill ""
 
 // TODO: Update keyboard stock (kurangi 5)
@@ -159,7 +123,6 @@ whichis keyboardstock itu keyboardstock - 5
 // TODO: Update total revenue
 whichis totalRevenue itu totalRevenue + finalTotal3
 
-spill "⚠️  " + keyboardname + " stock is LOW (" + keyboardstock + " remaining)"
 spill "✅ Order ORD-3 created successfully!"
 spill ""
 
@@ -202,7 +165,3 @@ spill "💰 Total Inventory Value: Rp " + totalValue
 spill "💵 Total Revenue: Rp " + totalRevenue
 spill "📊 Orders Processed: 3"
 spill ""
-
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-spill "✅ All test cases completed!"
-spill "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

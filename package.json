@@ -1,0 +1,15 @@
+{
+    "name": "celenj-ecommerce",
+    "version": "1.0.0",
+    "description": "E-commerce order management system in Jaksel Language",
+    "scripts": {
+        "test": "jest sample.test.js",
+        "start": "jaksel challenge/ecommerce.jaksel"
+    },
+    "devDependencies": {
+        "jest": "^29.0.0"
+    },
+    "dependencies": {
+        "jaksel-language": "^1.0.0"
+    }
+}
